@@ -459,7 +459,7 @@ clab_nodes = []
 for node in p_nodes:
     clab_nodes.append(f"""    {node}:
       kind: linux
-      image: frrouting/frr:latest
+      image: quay.io/frrouting/frr:10.0.0
       binds:
         - ./config/{node}/daemons:/etc/frr/daemons
         - ./config/{node}/frr.conf:/etc/frr/frr.conf""")
@@ -494,7 +494,7 @@ for node in pe_nodes:
     exec_block = "\n".join([f"        - {cmd}" for cmd in exec_cmds])
     clab_nodes.append(f"""    {node}:
       kind: linux
-      image: frrouting/frr:latest
+      image: quay.io/frrouting/frr:10.0.0
       binds:
         - ./config/{node}/daemons:/etc/frr/daemons
         - ./config/{node}/frr.conf:/etc/frr/frr.conf
@@ -541,7 +541,7 @@ for node in ce_hubs:
     exec_block = "\n".join([f"        - {cmd}" for cmd in exec_cmds])
     clab_nodes.append(f"""    {node}:
       kind: linux
-      image: frrouting/frr:latest
+      image: quay.io/frrouting/frr:10.0.0
       binds:
         - ./config/{node}/daemons:/etc/frr/daemons
         - ./config/{node}/frr.conf:/etc/frr/frr.conf
@@ -552,7 +552,7 @@ for node in ce_hubs:
 for node in gs_nodes:
     clab_nodes.append(f"""    {node}:
       kind: linux
-      image: frrouting/frr:latest
+      image: quay.io/frrouting/frr:10.0.0
       binds:
         - ./config/{node}/daemons:/etc/frr/daemons
         - ./config/{node}/frr.conf:/etc/frr/frr.conf""")
