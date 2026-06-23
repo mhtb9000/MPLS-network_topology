@@ -174,6 +174,7 @@ for idx, node in enumerate(p_nodes):
     # lo
     interfaces_config.append(f"""interface lo
  ip address {loopbacks[node]}/32
+ ip ospf area 0
 !""")
     
     # physical interfaces
@@ -200,8 +201,6 @@ mpls label dynamic-block {label_start} {label_end}
 !
 router ospf
  ospf router-id {loopbacks[node]}
- network {loopbacks[node]}/32 area 0
- network 10.100.1.0/24 area 0
 !
 mpls ldp
  router-id {loopbacks[node]}
@@ -229,6 +228,7 @@ for idx, node in enumerate(pe_nodes):
     # lo
     interfaces_config.append(f"""interface lo
  ip address {loopbacks[node]}/32
+ ip ospf area 0
 !""")
     
     # physical interfaces
@@ -304,8 +304,6 @@ mpls label dynamic-block {label_start} {label_end}
 !
 router ospf
  ospf router-id {loopbacks[node]}
- network {loopbacks[node]}/32 area 0
- network 10.100.1.0/24 area 0
 !
 mpls ldp
  router-id {loopbacks[node]}
