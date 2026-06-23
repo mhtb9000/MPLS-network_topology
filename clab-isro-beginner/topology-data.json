@@ -1,0 +1,541 @@
+{
+  "name": "isro-beginner",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-03ce2edf9b04",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "dc": {
+      "index": "0",
+      "shortname": "dc",
+      "longname": "clab-isro-beginner-dc",
+      "fqdn": "dc.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/dc",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/dc",
+        "clab-node-longname": "clab-isro-beginner-dc",
+        "clab-node-name": "dc",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "huba": {
+      "index": "1",
+      "shortname": "huba",
+      "longname": "clab-isro-beginner-huba",
+      "fqdn": "huba.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/huba",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/huba",
+        "clab-node-longname": "clab-isro-beginner-huba",
+        "clab-node-name": "huba",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "hubb": {
+      "index": "2",
+      "shortname": "hubb",
+      "longname": "clab-isro-beginner-hubb",
+      "fqdn": "hubb.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/hubb",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/hubb",
+        "clab-node-longname": "clab-isro-beginner-hubb",
+        "clab-node-name": "hubb",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "mission": {
+      "index": "3",
+      "shortname": "mission",
+      "longname": "clab-isro-beginner-mission",
+      "fqdn": "mission.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/mission",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/mission",
+        "clab-node-longname": "clab-isro-beginner-mission",
+        "clab-node-name": "mission",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p1": {
+      "index": "4",
+      "shortname": "p1",
+      "longname": "clab-isro-beginner-p1",
+      "fqdn": "p1.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/p1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/p1",
+        "clab-node-longname": "clab-isro-beginner-p1",
+        "clab-node-name": "p1",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p2": {
+      "index": "5",
+      "shortname": "p2",
+      "longname": "clab-isro-beginner-p2",
+      "fqdn": "p2.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/p2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/p2",
+        "clab-node-longname": "clab-isro-beginner-p2",
+        "clab-node-name": "p2",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p3": {
+      "index": "6",
+      "shortname": "p3",
+      "longname": "clab-isro-beginner-p3",
+      "fqdn": "p3.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/p3",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/p3",
+        "clab-node-longname": "clab-isro-beginner-p3",
+        "clab-node-name": "p3",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p4": {
+      "index": "7",
+      "shortname": "p4",
+      "longname": "clab-isro-beginner-p4",
+      "fqdn": "p4.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/p4",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/p4",
+        "clab-node-longname": "clab-isro-beginner-p4",
+        "clab-node-name": "p4",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe1": {
+      "index": "8",
+      "shortname": "pe1",
+      "longname": "clab-isro-beginner-pe1",
+      "fqdn": "pe1.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/pe1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/pe1",
+        "clab-node-longname": "clab-isro-beginner-pe1",
+        "clab-node-name": "pe1",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe2": {
+      "index": "9",
+      "shortname": "pe2",
+      "longname": "clab-isro-beginner-pe2",
+      "fqdn": "pe2.isro-beginner.io",
+      "group": "",
+      "labdir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/pe2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-03ce2edf9b04",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mehtabsingh/labs/isro-beginner/clab-isro-beginner/pe2",
+        "clab-node-longname": "clab-isro-beginner-pe2",
+        "clab-node-name": "pe2",
+        "clab-node-type": "",
+        "clab-owner": "mehtabsingh",
+        "clab-topo-file": "/home/mehtabsingh/labs/isro-beginner/topology.yml",
+        "containerlab": "isro-beginner"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "mission",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:f3:78:52",
+          "peer": "z"
+        },
+        "z": {
+          "node": "dc",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:0f:cc:48",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "dc",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:8f:6c:e1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "pe1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:99:b4:1a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "pe1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:91:24:8f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "p1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:88:a4:50",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "pe1",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:f7:18:ce",
+          "peer": "z"
+        },
+        "z": {
+          "node": "p2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:79:2b:6b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "p1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:ac:4c:37",
+          "peer": "z"
+        },
+        "z": {
+          "node": "p2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:a5:b2:b9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "p1",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:35:2b:c9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "p3",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:22:91:77",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "p1",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:f6:ae:b4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "p4",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:e2:eb:5c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "p2",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:85:38:49",
+          "peer": "z"
+        },
+        "z": {
+          "node": "p3",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:f1:03:69",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "p2",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:22:a1:f0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "p4",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:78:7a:1e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "p3",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:85:9d:12",
+          "peer": "z"
+        },
+        "z": {
+          "node": "p4",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:05:04:d5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "p4",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:0e:4f:bd",
+          "peer": "z"
+        },
+        "z": {
+          "node": "pe2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:d6:f0:82",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "pe2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:19:6f:44",
+          "peer": "z"
+        },
+        "z": {
+          "node": "huba",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:8d:32:ca",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "pe2",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:8c:77:d9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "hubb",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:53:70:02",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

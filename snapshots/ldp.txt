@@ -1,0 +1,5 @@
+% Can't open configuration file /etc/frr/vtysh.conf due to 'No such file or directory'.
+AF   ID              State       Remote Address    Uptime
+ipv4 2.2.2.2         OPERATIONAL 2.2.2.2         00:05:28
+ipv4 4.4.4.4         OPERATIONAL 4.4.4.4         00:04:33
+ipv4 11.11.11.11     OPERATIONAL 11.11.11.11     00:04:10

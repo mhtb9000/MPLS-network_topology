@@ -1,0 +1,51 @@
+---
+dc:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.10
+huba:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.11
+hubb:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.7
+mission:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.13
+p1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.5
+p2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.12
+p3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.9
+p4:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.6
+pe1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
+pe2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.8

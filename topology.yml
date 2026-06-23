@@ -1,0 +1,91 @@
+name: isro-beginner
+
+topology:
+  nodes:
+
+    mission:
+      kind: linux
+      image: alpine:latest
+
+    dc:
+      kind: linux
+      image: alpine:latest
+
+    pe1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./pe1/daemons:/etc/frr/daemons
+        - ./pe1/frr.conf:/etc/frr/frr.conf
+
+    pe2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./pe2/daemons:/etc/frr/daemons
+        - ./pe2/frr.conf:/etc/frr/frr.conf
+
+    p1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./p1/daemons:/etc/frr/daemons
+        - ./p1/frr.conf:/etc/frr/frr.conf
+
+    p2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./p2/daemons:/etc/frr/daemons
+        - ./p2/frr.conf:/etc/frr/frr.conf
+
+    p3:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./p3/daemons:/etc/frr/daemons
+        - ./p3/frr.conf:/etc/frr/frr.conf
+
+    p4:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./p4/daemons:/etc/frr/daemons
+        - ./p4/frr.conf:/etc/frr/frr.conf
+
+    huba:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./huba/daemons:/etc/frr/daemons
+        - ./huba/frr.conf:/etc/frr/frr.conf
+
+    hubb:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./hubb/daemons:/etc/frr/daemons
+        - ./hubb/frr.conf:/etc/frr/frr.conf
+
+  links:
+
+    - endpoints: ["mission:eth1","dc:eth1"]
+
+    - endpoints: ["dc:eth2","pe1:eth1"]
+
+    - endpoints: ["pe1:eth2","p1:eth1"]
+    - endpoints: ["pe1:eth3","p2:eth1"]
+
+    - endpoints: ["p1:eth2","p2:eth2"]
+    - endpoints: ["p1:eth3","p3:eth1"]
+    - endpoints: ["p1:eth4","p4:eth1"]
+
+    - endpoints: ["p2:eth3","p3:eth2"]
+    - endpoints: ["p2:eth4","p4:eth2"]
+
+    - endpoints: ["p3:eth3","p4:eth3"]
+
+    - endpoints: ["p4:eth4","pe2:eth1"]
+
+    - endpoints: ["pe2:eth2","huba:eth1"]
+    - endpoints: ["pe2:eth3","hubb:eth1"]
